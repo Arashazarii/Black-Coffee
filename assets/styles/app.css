@@ -2,6 +2,7 @@
   --font-inter-md: "Inter Medium";
   --font-inter-semiBold: "Inter SemiBold";
   --font-inter-Bold: "Inter Bold";
+  --font-inter-Regular: "Inter Regular";
   --text-white: #fff;
   --text-coffee: rgba(232, 198, 153);
 }
@@ -25,6 +26,11 @@ fonts
 @font-face {
   font-family: "Inter Bold";
   src: url("../fonts/Inter/Inter_18pt-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Inter Regular";
+  src: url("../fonts/Inter/Inter_18pt-Regular.ttf");
 }
 
 *,
@@ -71,9 +77,10 @@ App code
 #header {
   width: 80%;
   height: 100px;
-  background: rgba(232, 198, 153, 0.185);
+  background: rgb(92 71 43 / 75%);
   position: fixed;
-  z-index: 10;
+  z-index: 12;
+  backdrop-filter: blur(3px);
   top: 20px;
   left: 50%;
   right: 50%;
@@ -126,11 +133,10 @@ App code
           justify-content: center;
           align-items: center;
           position: absolute;
-          /* z-index: 300; */
           top: 75px;
           height: 80px;
           width: 100px;
-          background-color: rgba(149, 130, 106, 0.408);
+          background: rgb(92 71 43 / 75%);
           border-radius: 16px;
           > li {
             padding: 5px 0;
@@ -230,7 +236,7 @@ App code
 #introduction {
   background-image: url(../images/header-bg.jpg);
   width: 100%;
-  height: 100vh;
+  height: 145vh;
   aspect-ratio: 16 / 9;
   background-size: cover;
   background-position: center;
@@ -276,6 +282,7 @@ App code
   }
 }
 
+/* mobile menu */
 #mobile__menu {
   display: block;
   position: absolute;
@@ -410,6 +417,140 @@ App code
   }
 }
 
+/* backdrop */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -100;
+  cursor: pointer;
+}
+
+/* live coffee */
+.live__coffee {
+  width: 100%;
+  height: 800px;
+  background-color: var(--text-white);
+
+  > .live__coffee__holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+
+    > .live__coffee__gif {
+      > img {
+        border-radius: 20px;
+      }
+    }
+
+    > .live__coffee__content {
+      > span {
+        &:first-of-type {
+          text-transform: uppercase;
+          color: var(--text-coffee);
+          padding-bottom: 10px;
+          font-family: var(--font-inter-Regular);
+          font-size: 14px;
+        }
+
+        &:last-of-type {
+          font-family: var(--font-inter-Regular);
+          font-size: 14px;
+        }
+      }
+
+      > h2 {
+        font-family: var(--font-inter-semiBold);
+        font-size: 50px;
+        line-height: 70px;
+      }
+
+      > p {
+        color: gray;
+        font-family: var(--font-inter-Regular);
+        font-size: 14px;
+        padding: 10px 0 20px;
+      }
+    }
+  }
+}
+
+/* coffee items */
+.coffee__items {
+  width: 100%;
+  height: 800px;
+  height: auto;
+  background-image: url(../images/menu-bg.jpg);
+
+  > .container {
+    > .row {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 26px;
+      row-gap: 10px;
+      justify-content: center;
+
+      > .row__item {
+        width: 380px;
+        height: 148px;
+        /* border: 1px solid red; */
+        background-color: #fff;
+        box-shadow: 0px 10px 30px 0px rgba(182, 136, 52, 0.2);
+        border-radius: 10px;
+        /* padding: 30px 30px; */
+        margin-bottom: 30px;
+
+        > .row__item__menu {
+          display: flex;
+          flex-direction: column;
+          padding: 21px 26px;
+          gap: 15px;
+
+          > .row__item__menu__container {
+            display: flex;
+            justify-content: space-between;
+            > .row__item__title {
+              font-family: var(--font-inter-Bold);
+              font-size: 20px;
+            }
+            > .row__item__price {
+              font-family: var(--font-inter-Bold);
+              color: var(--text-coffee);
+              font-size: 20px;
+            }
+          }
+          > .row__item__desc {
+            color: gray;
+            font-family: var(--font-inter-Regular);
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* component */
+.top__row {
+  > .top__row__content {
+    padding: 60px 0 40px;
+    > h1 {
+      text-align: center;
+      font-family: var(--font-inter-Bold);
+      font-size: 40px;
+    }
+
+    > p {
+      text-align: center;
+      font-family: var(--font-inter-Regular);
+      color: gray;
+    }
+  }
+}
 /* 
 
 Responsive
@@ -419,6 +560,17 @@ Responsive
 @media (max-width: 1280px) {
   .container {
     max-width: 1220px;
+  }
+
+  .coffee__items {
+    > .container {
+      > .row {
+        > .row__item {
+          width: 330px;
+          height: 148px;
+        }
+      }
+    }
   }
 }
 
@@ -444,6 +596,91 @@ Responsive
             display: none;
           }
         }
+      }
+    }
+  }
+
+  .live__coffee {
+    > .live__coffee__holder {
+      gap: 60px;
+
+      > .live__coffee__gif {
+        > img {
+          width: 350px;
+        }
+      }
+
+      > .live__coffee__content {
+        > span {
+          &:first-of-type {
+            padding-bottom: 10px;
+            font-size: 12px;
+          }
+
+          &:last-of-type {
+            font-size: 14px;
+          }
+        }
+
+        > h2 {
+          font-size: 40px;
+          line-height: 60px;
+        }
+
+        > p {
+          color: gray;
+          font-size: 12px;
+          padding: 10px 0 20px;
+        }
+      }
+    }
+  }
+
+  .coffee__items {
+    width: 100%;
+    height: 1200px;
+    background-image: url(../images/menu-bg.jpg);
+
+    > .container {
+      > .row {
+        column-gap: 16px;
+        row-gap: 0px;
+
+        > .row__item {
+          width: 260px;
+          height: 148px;
+
+          > .row__item__menu {
+            > .row__item__menu__container {
+              > .row__item__title {
+                font-size: 18px;
+              }
+              > .row__item__price {
+                font-size: 18px;
+              }
+            }
+            > .row__item__desc {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .top__row {
+    > .top__row__content {
+      padding: 60px 0 40px;
+      > h1 {
+        text-align: center;
+        font-family: var(--font-inter-Bold);
+        font-size: 35px;
+      }
+
+      > p {
+        text-align: center;
+        font-family: var(--font-inter-Regular);
+        color: gray;
       }
     }
   }
@@ -480,6 +717,96 @@ Responsive
       }
     }
   }
+
+  .live__coffee {
+    height: 900px;
+    margin-top: -30px;
+
+    > .live__coffee__holder {
+      gap: 60px;
+      flex-direction: column;
+
+      > .live__coffee__gif {
+        > img {
+          width: 350px;
+        }
+      }
+
+      > .live__coffee__content {
+        > span {
+          &:first-of-type {
+            padding-bottom: 10px;
+            font-size: 12px;
+          }
+
+          &:last-of-type {
+            font-size: 14px;
+          }
+        }
+
+        > h2 {
+          font-size: 40px;
+          line-height: 60px;
+        }
+
+        > p {
+          color: gray;
+          font-size: 12px;
+          padding: 10px 0 20px;
+        }
+      }
+    }
+  }
+
+  .coffee__items {
+    width: 100%;
+    height: 1900px;
+    background-image: url(../images/menu-bg.jpg);
+
+    > .container {
+      > .row {
+        column-gap: 16px;
+        row-gap: 0px;
+
+        > .row__item {
+          width: 260px;
+          height: 148px;
+
+          > .row__item__menu {
+            > .row__item__menu__container {
+              > .row__item__title {
+                font-size: 18px;
+              }
+              > .row__item__price {
+                font-size: 18px;
+              }
+            }
+            > .row__item__desc {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .top__row {
+    > .top__row__content {
+      padding: 60px 0 40px;
+      > h1 {
+        text-align: center;
+        font-family: var(--font-inter-Bold);
+        font-size: 24px;
+      }
+
+      > p {
+        text-align: center;
+        font-family: var(--font-inter-Regular);
+        color: gray;
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -501,6 +828,24 @@ Responsive
         > .introduction__title {
           font-size: 32px;
         }
+      }
+    }
+  }
+
+  .top__row {
+    > .top__row__content {
+      padding: 60px 0 40px;
+      > h1 {
+        text-align: center;
+        font-family: var(--font-inter-Bold);
+        font-size: 20px;
+      }
+
+      > p {
+        text-align: center;
+        font-family: var(--font-inter-Regular);
+        color: gray;
+        font-size: 12px;
       }
     }
   }
