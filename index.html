@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#56342b" />
+    <meta name="msapplication-navbutton-color" content="#56342b" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#56342b" />
+    <link rel="stylesheet" href="./assets/styles/reset.css" />
+    <link rel="stylesheet" href="./assets/styles/app.css" />
+    <title>Cafe</title>
+  </head>
+  <body style="position: relative">
+    <!-- laptop header -->
+    <header id="header">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar__container">
+            <ul class="nav__items">
+              <li class="nav__item"><a href="#">Home</a></li>
+              <li class="nav__item"><a href="#">About</a></li>
+              <li class="nav__item"><a href="#">Coffee</a></li>
+              <li class="nav__item"><a href="#">Review</a></li>
+              <li class="nav__item"><a href="#">Blogs</a></li>
+              <li class="nav__item dropdown">
+                <a class="dropdown__menu" href="">Pages</a>
+                <ul>
+                  <li><a href="#">Generic</a></li>
+                  <li><a href="#">Elements</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="nav__logo">
+              <img src="./assets/images/logo/logo.avif" alt="" />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- mobile header -->
+    <header id="mobile__header">
+      <div class="mobile__header__logo">
+        <img src="./assets/images/logo/logo.avif" alt="" />
+      </div>
+      <div class="row">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </div>
+    </header>
+
+    <!-- monile Menu -->
+    <div id="mobile__menu">
+      <div>
+        <p>Cafe</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="close-mobile-menu">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </div>
+
+      <ul class="mobile__menu__items">
+        <li class="mobile__menu__item"><a href="#">Home</a></li>
+        <li class="mobile__menu__item"><a href="#">about</a></li>
+        <li class="mobile__menu__item"><a href="#">coffee</a></li>
+        <li class="mobile__menu__item"><a href="#">review</a></li>
+        <li class="mobile__menu__item"><a href="#">blog</a></li>
+        <li class="mobile__menu__item mobile__menu__drop">
+          <a href="#"
+            >pages
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </a>
+          <ul class="mobile__menu__dropdown">
+            <li><a href="#">Generic</a></li>
+            <li><a href="#">Elements</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- main -->
+    <div id="introduction">
+      <div class="container">
+        <div class="introduction__content">
+          <p class="introduction__desc">Now you can feel the Energy</p>
+          <p class="introduction__title">
+            Start your day with <br />a black Coffee
+          </p>
+          <a class="introduction__btn" href="#">BUY NOW</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/scripts/app.js"></script>
+  </body>
+</html>
