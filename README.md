@@ -201,7 +201,7 @@ We welcome contributions! Here's how you can help:
 **Arash Azari** - Web Developer
 
 ### Connect with Me:
-- 🌐 [Portfolio](https://arashazarii.github.io/)
+- 🌐 [Portfolio](https://arashazarii.github.io/Portfolio/)
 - 💼 [LinkedIn](https://www.linkedin.com/in/arashazarii)
 - 🐙 [GitHub](https://github.com/Arashazarii)
 - 📱 [Telegram](https://t.me/arshazari)
