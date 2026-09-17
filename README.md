@@ -7,13 +7,12 @@ A modern, fully responsive coffee shop website built with pure HTML, CSS, and Ja
 ---
 
 ## 📸 Screenshots
+
+### 💻 Desktop View
 ![Home](screenshots/home.png)
 ![Telecast](screenshots/Telecast.png)
 ![Menu](screenshots/Menus.png)
 ![Blogs](screenshots/Blogs.png)
-
-### 💻 Desktop View
-![Black Coffee Desktop](https://via.placeholder.com/1200x600?text=Desktop+Screenshot+Here)
 
 The full desktop experience showcasing:
 - Complete navigation menu
@@ -25,7 +24,10 @@ The full desktop experience showcasing:
 - Footer with social links
 
 ### 📱 Mobile View
-![Black Coffee Mobile](https://via.placeholder.com/400x800?text=Mobile+Screenshot+Here)
+![Home](screenshots/mobile-home.png)
+![Menu](screenshots/mbile-menus.png)
+![Blogs](screenshots/menu-blogs.png)
+![Footer](screenshots/mobile-footer.png)
 
 Fully optimized mobile experience featuring:
 - Responsive navigation (hamburger menu)
